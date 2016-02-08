@@ -137,18 +137,21 @@ use std::str;
 
 pub use encoding::EncodingOverride;
 pub use origin::Origin;
-pub use parser::ParseError;
 pub use host::Host;
+pub use parser::ParseError;
+pub use slicing::Position;
 
 mod encoding;
 mod host;
+mod idna_mapping;
 mod origin;
 mod parser;
+mod slicing;
+
 pub mod percent_encoding;
 pub mod form_urlencoded;
 pub mod punycode;
 pub mod idna;
-mod idna_mapping;
 
 /// A parsed URL record.
 #[derive(Clone)]
